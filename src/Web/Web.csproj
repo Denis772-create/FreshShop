@@ -13,4 +13,11 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Configuration\" />
+    <Folder Include="Pages\Shared\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
 </Project>

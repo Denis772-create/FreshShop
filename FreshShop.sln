@@ -5,17 +5,17 @@ VisualStudioVersion = 17.0.31825.309
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4013513B-7EA1-474A-953F-C775C8C9CADB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "src\Web\Web.csproj", "{8CECEAE7-82EF-4847-9DC5-B1DF5ABB926F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "src\Web\Web.csproj", "{8CECEAE7-82EF-4847-9DC5-B1DF5ABB926F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "src\Api\Api.csproj", "{DC9A18D0-CA02-4FFA-95DE-14DE065CB745}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "src\Api\Api.csproj", "{DC9A18D0-CA02-4FFA-95DE-14DE065CB745}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCore", "src\AppCore\AppCore.csproj", "{E883D430-0EBA-41CB-AEA8-D36C40084820}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppCore", "src\AppCore\AppCore.csproj", "{E883D430-0EBA-41CB-AEA8-D36C40084820}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{A0217429-A0CE-4BFB-AE76-CF780E124C58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{A0217429-A0CE-4BFB-AE76-CF780E124C58}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CED3530E-F5B9-4D41-87F6-0AEC6DB6D15A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "tests\UnitTests\UnitTests.csproj", "{2AA48A52-D139-4523-B1A7-E19930D59445}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "tests\UnitTests\UnitTests.csproj", "{2AA48A52-D139-4523-B1A7-E19930D59445}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

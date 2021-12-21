@@ -15,11 +15,6 @@ public class Program
 
 
 
-
-
-
-
-
         host.Run();
     }
 
