@@ -1,4 +1,10 @@
-﻿namespace Web
+﻿using Infrastructure.Data;
+using Infrastructure.Services;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Web.Configuration;
+
+namespace Web
 {
     public class Startup
     {
@@ -12,6 +18,9 @@
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<CatalogContext>(c =>
+                c.UseSqlServer(Configuration.GetConnectionString("CatalogConnection")));
+            services.AddCoreServices(Configuration);
             services.AddMemoryCache();
             services.AddMvc();
             services.AddRazorPages();
@@ -32,16 +41,16 @@
             app.UseCookiePolicy();
             app.UseStaticFiles();
             app.UseRouting();
-            
+
             app.UseAuthentication();
             app.UseAuthorization();
-            
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
                 endpoints.MapRazorPages();
             });
-            
+
         }
     }
 }
