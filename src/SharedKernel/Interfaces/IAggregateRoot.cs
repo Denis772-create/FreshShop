@@ -1,4 +1,4 @@
-﻿namespace AppCore.Interfaces
+﻿namespace SharedKernel.Interfaces
 {
     public interface IAggregateRoot
     {

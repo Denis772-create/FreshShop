@@ -1,5 +1,6 @@
 ﻿using AppCore.Interfaces;
 using Ardalis.GuardClauses;
+using SharedKernel.Interfaces;
 
 namespace AppCore.Entities
 {
