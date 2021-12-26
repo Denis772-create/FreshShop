@@ -1,4 +1,4 @@
-﻿using AppCore.Interfaces;
+﻿    using AppCore.Interfaces;
 using Infrastructure.Services;
 
 namespace Web.Configuration

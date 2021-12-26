@@ -1,4 +1,6 @@
-﻿using SharedKernel.Interfaces;
+﻿using SharedKernel;
+using SharedKernel.Interfaces;
+using SharedKernel.Services;
 using System.Linq.Expressions;
 
 namespace AppCore.Extensions
@@ -12,18 +14,18 @@ namespace AppCore.Extensions
             return builder;
         }
 
-    //    public static IIncludableSpecificationBuilder<T, TProperty> Include<T, TProperty>(
-    //this ISpecificationBuilder<T> specificationBuilder,
-    //Expression<Func<T, TProperty>> includeExpression) where T : class
-    //    {
-    //        var info = new IncludeExpressionInfo(includeExpression, typeof(T), typeof(TProperty));
+        public static IIncludableSpecificationBuilder<T, TProperty> Include<T, TProperty>(
+                            this ISpecificationBuilder<T> specificationBuilder,
+                            Expression<Func<T, TProperty>> includeExpression) where T : class
+        {
+            var info = new IncludeExpressionInfo(includeExpression, typeof(T), typeof(TProperty));
 
-    //        ((List<IncludeExpressionInfo>)specificationBuilder.Specification.IncludeExpressions).Add(info);
+            ((List<IncludeExpressionInfo>)specificationBuilder.Specification.IncludeExpressions).Add(info);
 
-    //        var includeBuilder = new IncludableSpecificationBuilder<T, TProperty>(specificationBuilder.Specification);
+            var includeBuilder = new IncludableSpecificationBuilder<T, TProperty>(specificationBuilder.Specification);
 
-    //        return includeBuilder;
-    //    }
+            return includeBuilder;
+        }
 
 
         public static ISpecificationBuilder<T> Include<T>(this ISpecificationBuilder<T> specificationBuilder,
@@ -42,7 +44,7 @@ namespace AppCore.Extensions
             return specificationBuilder;
         }
 
-        public static ISpecificationBuilder<T> Skip<T>(this ISpecificationBuilder<T> specificationBuilder,int skip)
+        public static ISpecificationBuilder<T> Skip<T>(this ISpecificationBuilder<T> specificationBuilder, int skip)
         {
             if (specificationBuilder.Specification.Skip != null) throw new Exception();
 

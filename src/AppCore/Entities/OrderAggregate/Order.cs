@@ -1,4 +1,4 @@
-﻿using AppCore.Interfaces;
+﻿using SharedKernel.Interfaces;
 
 namespace AppCore.Entities.OrderAggregate
 {
