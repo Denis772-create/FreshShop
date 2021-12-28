@@ -13,6 +13,21 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+//services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//    .AddJwtBearer(o =>
+//    {
+//        o.TokenValidationParameters = new TokenValidationParameters()
+//        {
+//            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Authentication:AccessTokenSecret"])),
+//            ValidIssuer = Configuration["Authentication:Issuer"],
+//            ValidAudience = Configuration["Authentication:Audience"],
+//            ValidateIssuerSigningKey = true,
+//            ValidateIssuer = true,
+//            ValidateAudience = true,
+//            ClockSkew = TimeSpan.Zero
+//        };
+//    });
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

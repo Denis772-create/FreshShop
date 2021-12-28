@@ -44,7 +44,7 @@ namespace AppCore.Extensions
             return specificationBuilder;
         }
 
-        public static ISpecificationBuilder<T> Skip<T>(this ISpecificationBuilder<T> specificationBuilder, int skip)
+        public static ISpecificationBuilder<T> Skip<T>(this ISpecificationBuilder<T> specificationBuilder, int? skip)
         {
             if (specificationBuilder.Specification.Skip != null) throw new Exception();
 

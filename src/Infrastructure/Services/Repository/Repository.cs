@@ -1,13 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using SharedKernel.Interfaces;
 
 namespace Infrastructure.Services.Repository
 {
-    public class Repository<T> : IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class, IAggregateRoot
     {
         private readonly DbContext _context;
         private readonly ISpecificationEvaluator specificationEvaluator;
-        public Repository(DbContext context)
+        public Repository(CatalogContext context)
             : this(context, SpecificationEvaluator.Default)
         {
             _context = context;

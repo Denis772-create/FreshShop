@@ -13,7 +13,11 @@ namespace AppCore.Entities
         public int CatalogTypeId { get; private set; }
         public CatalogType CatalogType { get; private set; }
 
-        public CatalogItem(string name, string description, decimal price, string pictureUri, int catalogTypeId)
+        public CatalogItem(int catalogTypeId,
+            string description,
+            string name,
+            decimal price,
+            string pictureUri)
         {
             Name = name;
             Description = description;

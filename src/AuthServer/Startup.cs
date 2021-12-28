@@ -1,6 +1,7 @@
 ﻿using AuthServer.Configuration;
 using AuthServer.Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -30,7 +31,9 @@ namespace AuthServer
                 o.Password.RequireNonAlphanumeric = false;
                 o.Password.RequireUppercase = false;
                 o.Password.RequiredLength = 4;
-            }).AddEntityFrameworkStores<AuthDbContext>();
+            })
+            .AddEntityFrameworkStores<AuthDbContext>()
+            .AddDefaultTokenProviders();
 
             services.AddDbContext<AuthDbContext>(o => o.UseSqlServer(_configuration.GetConnectionString("Connection")));
 
