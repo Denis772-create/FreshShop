@@ -1,0 +1,9 @@
+﻿@if (Context.User.Identity.IsAuthenticated)
+{
+        @await Component.InvokeAsync("Basket")
+}
+else
+{
+
+        @await Component.InvokeAsync("Basket")
+}

@@ -14,7 +14,8 @@ namespace Infrastructure.Services.Repository
             {
                 WhereEvaluator.Instance,
                 SearchEvaluator.Instance,
-                IncludeEvaluator.Instance
+                IncludeEvaluator.Instance,
+                PaginationEvaluator.Instance
             });
         }
         public SpecificationEvaluator(IEnumerable<IEvaluator> evaluators)

@@ -54,7 +54,7 @@ namespace Infrastructure.Data
         {
             return new List<CatalogItem>()
             {
-                new(2,".NET Bot Black Sweatshirt" , ".NET Bot Black Sweatshirt" , 19.5M , "banner-02.jpg"),
+                new(2,".NET Bot Black Sweatshirt" , ".NET Bot Black Sweatshirt" , 19.5M , "big-img-01.jpg"),
                 new(1,".NET Black & White Mug"    , ".NET Black & White Mug"    , 8.50M , "big-img-01.jpg"),
                 new(2,"Prism White T-Shirt"       , "Prism White T-Shirt"       , 12    , "big-img-01.jpg"),
                 new(2,".NET Foundation Sweatshirt", ".NET Foundation Sweatshirt", 12    , "big-img-01.jpg"),

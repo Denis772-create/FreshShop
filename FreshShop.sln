@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "tests\UnitTest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel", "src\SharedKernel\SharedKernel.csproj", "{C8D563AB-386E-4626-BEE3-CF29E2E231AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServer", "src\AuthServer\AuthServer.csproj", "{FEC995BA-52F9-4F9B-8A9B-1CD56E3CB785}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthServer", "src\AuthServer\AuthServer.csproj", "{FEC995BA-52F9-4F9B-8A9B-1CD56E3CB785}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

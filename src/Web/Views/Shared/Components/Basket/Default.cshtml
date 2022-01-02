@@ -1,0 +1,17 @@
+﻿@model BasketComponentViewModel
+@{
+    ViewData["Title"] = "My Basket";
+}
+
+<div class="attr-nav">
+    <ul>
+        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+        <li class="side-menu">
+            <a href="#" onclick="side()">
+                <i class="fa fa-shopping-bag"></i>
+                <span class="badge">@Model.ItemsCount</span>
+                <p>My Cart</p>
+            </a>
+        </li>
+    </ul>
+</div>

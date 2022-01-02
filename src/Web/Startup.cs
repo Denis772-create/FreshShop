@@ -53,7 +53,7 @@ namespace Web
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                    endpoints.MapRazorPages();
             });
 
         }

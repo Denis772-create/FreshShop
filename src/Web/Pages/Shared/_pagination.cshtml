@@ -11,22 +11,22 @@
     nextRouteData.Add("pageId", (Model.ActualPage + 1).ToString());
 }
 
-<div class="esh-pager">
-    <div class="container-fluid">
-        <article class="esh-pager-wrapper row">
-            <nav>
+<div class="container">
+    <article class="esh-pager-wrapper row">
+        <nav>
+            <div class="owl-nav">
                 <div class="col-md-2 col-xs-12">
                     <a class="esh-pager-item-left esh-pager-item--navigable esh-pager-item @Model.Previous"
                        id="Previous"
                        asp-all-route-data="preRouteData"
                        aria-label="Next">
-                       Previous
+                        <button type="button" role="presentation" class="owl-next">PREV</button>
                     </a>
                 </div>
 
-                <div class="col-md-8 col-xs-12">
+                <div>
                     <span class="esh-pager-item">
-                        Showing @Model.ItemsPerPage of @Model.TotalItems products - Page @(Model.ActualPage + 1) - @Model.TotalPages
+                        @Model.ItemsPerPage of @Model.TotalItems products - Page @(Model.ActualPage + 1) - @Model.TotalPages
                     </span>
                 </div>
 
@@ -35,10 +35,10 @@
                        id="Next"
                        asp-all-route-data="nextRouteData"
                        aria-label="Next">
-                        Next
+                        <button type="button" role="presentation" class="owl-next">NEXT</button>
                     </a>
                 </div>
-            </nav>
-        </article>
-    </div>
+            </div>
+        </nav>
+    </article>
 </div>

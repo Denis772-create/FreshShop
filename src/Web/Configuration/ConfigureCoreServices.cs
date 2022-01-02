@@ -1,4 +1,6 @@
-﻿    using AppCore.Interfaces;
+﻿using AppCore.Interfaces;
+using AppCore.Services;
+using Infrastructure.Data;
 using Infrastructure.Services;
 using Infrastructure.Services.Repository;
 using SharedKernel.Interfaces;
@@ -11,6 +13,9 @@ namespace Web.Configuration
         {
             services.AddScoped(typeof(IReadRepository<>), typeof(Repository<>));
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<IBasketQueryService, BasketQueryService>();
+            services.AddScoped<IBasketService, BasketService>();
+            services.AddScoped(typeof(IAppLogger<>), typeof(AppLogger<>));
 
             services.AddTransient<IEmailSender, EmailSender>();
             services.Configure<AuthMessageSenderOptions>(configuration);
